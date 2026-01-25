@@ -1,0 +1,58 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container
+{
+padding: 20px;
+}
+
+.header
+{
+    display: flex;
+    gap: 232px;    
+}
+.header .header_image{
+    padding: 21.8px;
+    //width: 50%;
+    //background-color: red;
+    
+}
+.navigation ul
+{
+ display: flex;
+ list-style-type: none; 
+
+}
+.navigation ul li{
+   padding: 10px;
+}
+.navigation ul li a{
+  text-decoration: none;
+  color:black
+}
+
+
+.icons ul{
+    display: flex;
+    list-style-type: none;
+    
+}
+.icons ul li{
+padding: 24px ;
+}
+.collection ul
+{
+    display: flex;
+    gap: 30px;
+    margin-left: 25px;
+}
+.collection ul li{
+    padding-top:30px ;
+    list-style-type: none;
+    text-align: center;
+    s
+}

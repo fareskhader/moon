@@ -4,55 +4,131 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 .container
 {
-padding: 20px;
+    width:100% ;
 }
-
 .header
 {
+    width: 100%;
+    background-color: red;
     display: flex;
-    gap: 232px;    
+    flex-wrap: nowrap;
+    justify-content: center;
+    text-align: center;
+    gap: 232px;
+    padding:0px 160px;
 }
-.header .header_image{
-    padding: 21.8px;
-    //width: 50%;
-    //background-color: red;
-    
-}
-.navigation ul
+.header .menu
 {
- display: flex;
- list-style-type: none; 
-
+    display: none;
 }
-.navigation ul li{
-   padding: 10px;
-}
-.navigation ul li a{
-  text-decoration: none;
-  color:black
-}
-
-
-.icons ul{
-    display: flex;
-    list-style-type: none;
+.header .header_image 
+{
+    padding: 21.8px 0px;
     
 }
-.icons ul li{
-padding: 24px ;
+
+
+.header .navigation{
+    padding: 36px 0px;
 }
+.header .navigation ul
+{
+display: flex;
+gap: 60px;
+}
+.header .navigation ul li{
+    list-style: none;
+}
+
+.header .navigation ul li a
+{
+    text-decoration: none;
+    color: black;
+}
+
+.header .icons ul
+{
+    
+display: flex;
+padding: 31px 0px;
+gap: 27px;
+}
+.header .icons ul li
+{
+    list-style: none;
+}
+
 .collection ul
 {
+    background-color: green;
     display: flex;
+    justify-content: center;
     gap: 30px;
-    margin-left: 25px;
+        padding:0px 160px;
+        width: 100%;
 }
 .collection ul li{
-    padding-top:30px ;
+    width: 60%;
+    padding-top:80px ;
     list-style-type: none;
+    text-align: center; 
+    
+}
+/*
+.collection ul li img{
+     // width: 100%;
+}
+*/
+@media screen and (min-width:0) and (max-width:996px)
+{
+ .header
+{
+    background-color: blue;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 250px;
+}
+.header .menu
+{
+    display: block;
+    width: 30px;
+}
+.header .header_image img
+{
+   width: 70%;
+}
+
+.header .navigation 
+{
+display: none;
+}
+.header .icons 
+{       
+padding: 13px 0px;
+gap: 5px;
+display: none;
+}     
+
+.collection ul
+{
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    s
+    width: 100%;
+    height: 100%;
+    gap: 0px;
+    padding: 20px 20px;
+}
+.collection ul li img{
+width: 100%;
+}
+
+ 
 }

@@ -20,16 +20,28 @@ h3
     width:100% ;
     box-sizing: border-box;
 }
+/*
+.settings
+{
+    background-image: url('../assets/images/Image\ \(10\).png');
+    width: 100%;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 -300px;
+}
+*/
 .header
 {
-    width: 100%;
-    background-color: red;
+    width: calc( 100% - 20% );
+    background-color: orange;
+    margin: auto;
+}
+.header .Header_Container
+{
     display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    text-align: center;
-    gap: 232px;
-    padding:0px 160px;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 .header .menu
 {
@@ -38,11 +50,13 @@ h3
 .header .header_image 
 {
     padding: 21.8px 0px;
+    flex-shrink: 0;
     
 }
 
 .header .navigation{
     padding: 36px 0px;
+    flex-shrink: 0;
 }
 .header .navigation ul
 {
@@ -51,6 +65,7 @@ gap: 60px;
 }
 .header .navigation ul li{
     list-style: none;
+    
 }
 
 .header .navigation ul li a
@@ -71,40 +86,59 @@ gap: 27px;
     list-style: none;
 }
 
-.collection ul
+.BAT_TRANG_DINNER_SET_Section
 {
-    background-color: green;
+    background-image: url(../assets/images/flat-lay-composition-different-sized-plates\ 1.svg);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+}
+.collection_container
+{
+        width: calc( 100% - 20% );
+        margin: 0 auto;
+        background-color: aquamarine;
+        padding: 30px 0;
+}
+.collection_row
+{
+ display: flex;
+ flex-wrap: wrap;
+ align-items: center;
+ justify-content: center;
+ list-style-type: none;  
+ gap: 10px; 
+}
+.collection_row li{
+    width: calc((100% - 30px ) / 4);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 30px;
-    padding:0px 160px;
-    width: 100%;
 }
-.collection ul li{
-    width: 100%;
-    padding-top:80px ;
-    list-style-type: none;
-    text-align: center; 
-    
+.collection_row .collection_one{
+    order: 1;
 }
 
+.collection_row li img{
+    width: 100%;
+    /*filter: blur(10px);
+    transition: filter .7s;*/
+}
 @media screen and (min-width:0) and (max-width:996px)
 {
- .header
+ .header .Header_Container
 {
     background-color: blue;
     display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    gap: 350px;
-    padding: 0px;
 }
 .header .menu
 {
     display: block;
     width: 30px;
+    order: 1;
 }
 .header .header_image img
 {
@@ -120,41 +154,17 @@ display: none;
 padding: 13px 0px;
 gap: 5px;
 display: none;
-}     
-.collection ul{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 10px;
-    padding: 0 20px;
-    justify-content: space-between;
-}
-
-.collection ul li{
-width: calc((100% - 20px ) / 3);
-}
-
-.collection ul li img{
-    width: 100%;
-}
-
-}
-@media screen and (min-width:0) and (max-width:450px)
+}  
+.collection_row li
 {
-   .header
-   {
-    gap: 100px;
-   } 
-   .collection ul 
-   {
-  gap: 10px;
-   }
-   .collection ul li
-{
-    width: calc((100% - 10px) / 2);
+    width: calc((100% - 20px ) / 3);
+}   
+
+
 }
-
-
+@media screen and (min-width:0) and (max-width:550px)
+{
+ 
 }
 
 .best_sellers {
@@ -183,11 +193,11 @@ gap: 30px;
 }
 
 .best_sellers .item
-{
+{ 
     text-align: left;
-    background-color: blueviolet;
    width: calc((100% - 90px) / 4 );
    padding: 5px;
+   box-shadow: 5px 5px 10px 5px rgb(190, 190, 190);
 }
 
 
@@ -207,10 +217,12 @@ gap: 30px;
     width: 100%;
 }
 .best_sellers h3{
+    color: white;
     font-size :20px;
     font-weight: 600;
     letter-spacing: 1px;
     margin-bottom: 12px;
+    text-shadow: 0 0 6px #000;
 }
 .best_sellers .item_content
 {
@@ -243,9 +255,11 @@ margin-bottom: 34px;
     white-space: nowrap;
     align-items: center;
 }
-.best_sellers .add_to_card:hover
+
+.best_sellers .item:hover .add_to_card
 {
     background-color: goldenrod;
+    transition-duration: .8s;
 }
 @media screen and (min-width:0px) and (max-width:500px) 
 {
@@ -254,6 +268,10 @@ margin-bottom: 34px;
     background-color: yellow;
    width: 100%;
 }
+.collection_row li
+{
+    width: 100%;
+} 
 
 }
 @media screen and (min-width:501px) and (max-width:700px) 
@@ -267,7 +285,12 @@ margin-bottom: 34px;
 {
 gap: 10px;
 }
+.collection_row li
+{
+    width: calc((100% - 10px ) / 2);
+} 
 }
+
 
 @media screen and (min-width:701px) and (max-width:1100px) 
 {
@@ -281,3 +304,60 @@ gap: 10px;
 gap: 15px;
 }
 }
+.discover_new_arrivals
+{
+    width: 100%;
+background-color: green;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 20px 0;
+gap: 10px;
+}
+.discover_new_arrivals_container
+{
+    width: calc(100% - 20% );
+    display: flex;
+    background-color: aqua;
+    padding: 15px;
+}
+.discover_new_arrivals_row
+{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap: 30px;
+
+}
+.discover_new_arrivals_row .item
+{
+display: flex;
+flex-direction: column;
+justify-content: left;
+gap: 5px;
+
+}
+.discover_new_arrivals_row .item p
+{
+width: 90%;
+}
+.discover_new_arrivals_row .item img
+{
+    width: 100%;
+}
+.discover_new_arrivals_row .item .add_to_card{
+    padding: 10px 25px;
+    font-size: 14px;
+    font-weight: 700;
+    transition:background-color 1s, color 1.3s ;
+}
+.discover_new_arrivals_row .item:hover .add_to_card
+{
+        background-color: red;
+        color: white;
+}
+
+
+
+

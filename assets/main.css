@@ -351,8 +351,8 @@ h3 {
     text-align: left;
     width: calc((100% - 90px) / 4);
     padding: 0px;
+    flex: 1;
 }
-
 
 .best_sellers h2 {
     font-family: Garamond;
@@ -375,10 +375,18 @@ h3 {
     font-weight: 600;
     letter-spacing: 1px;
     margin-bottom: 12px;
+    height: 50px;
 }
 
 .best_sellers .item_content {
     margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.item_content p{
+ height: 80px;
 }
 
 .best_sellers .price {
